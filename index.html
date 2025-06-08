@@ -12,13 +12,14 @@
   <header>
     <nav>
       <ul>
-        <li><a href="about/about.html">About</a></li>
-        <li><a href="projects/projects.html">Projects</a></li>
-        <li><a href="contact/contact.html">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+<main>
   <section id="hero">
     <h1>Hi, I'm Joshua Maxi</h1>
     <p>I'm a 4th year computer engineering major.</p>
@@ -34,17 +35,27 @@
 
     <!-- Tabs Navigation linking to category pages -->
     <div class="project-tabs">
-      <ul>
-        <li><a href="https://example.com/school-projects" target="_blank">School Projects</a></li>
-        <li><a href="https://example.com/personal-projects" target="_blank">Personal Projects</a></li>
-        <li><a href="https://example.com/hardware-projects" target="_blank">Hardware Projects</a></li>
-        <li><a href="https://example.com/software-projects" target="_blank">Software-Only Projects</a></li>
-      </ul>
-    </div>
+        <ul>
+          <li class="active"><a href="#" data-target="personal">Personal Projects</a></li>
+          <li><a href="#" data-target="school">School Projects</a></li>
+          <li><a href="#" data-target="hardware">Hardware Projects</a></li>
+          <li><a href="#" data-target="software">Software-Only Projects</a></li>
+        </ul>
+      </div>
 
-    <!-- Fallback content for non-JS or descriptive text -->
-    <div class="project-fallback">
-      <p>Select a tab above to view the projects on their respective pages.</p>
+    <div class="project-content">
+      <div id="personal"  class="tab-content active">
+        <!-- your personal‐projects markup -->
+      </div>
+      <div id="school"    class="tab-content">
+        <!-- your school‐projects markup -->
+      </div>
+      <div id="hardware"  class="tab-content">
+        <!-- your hardware‐projects markup -->
+      </div>
+      <div id="software"  class="tab-content">
+        <!-- your software‐only markup -->
+      </div>
     </div>
   </section>
 
@@ -52,9 +63,12 @@
     <h2>Contact</h2>
     <p>Email: <a href="mailto:joshuamaxi0391@gmail.com">joshuamaxi0391@gmail.com</a></p>
   </section>
-
+  
+</main>
   <footer>
     <p>&copy; 2025 Joshua Maxi. All rights reserved.</p>
   </footer>
+
+  <script src="tabs.js" defer></script>
 </body>
 </html>

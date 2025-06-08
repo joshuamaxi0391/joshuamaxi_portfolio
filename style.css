@@ -1,82 +1,118 @@
-/* style.css */
+/* styles.css */
 
-/* Reset and base */
+/* ==== GLOBAL RESET & SETTINGS ==== */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background: #f9f9f9;
   color: #333;
+  padding: 1rem;
 }
 
-/* Header/Nav */
+/* ==== HEADER & NAVIGATION ==== */
 header {
-  background-color: #333;
+  background: #333;
   color: #fff;
   padding: 1rem 0;
+  margin-bottom: 2rem;
 }
+
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
 }
+
 nav li {
   margin: 0 1rem;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
+  font-size: 1rem;
+  transition: text-decoration 0.2s;
 }
 
-/* Hero Section */
-#hero {
-  padding: 4rem 1rem;
-  text-align: center;
-  background: #f4f4f4;
+nav a:hover {
+  text-decoration: underline;
 }
 
-/* Main Sections */
-#about,
-#projects,
-#contact {
-  padding: 2rem 1rem;
+/* ==== SECTION STYLING ==== */
+section {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Project Tabs */
+/* ==== PROJECT TABS NAV ==== */
 .project-tabs ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
-  border-bottom: 2px solid #ddd;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
+
 .project-tabs li {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
+
 .project-tabs a {
-  text-decoration: none;
+  display: block;
   padding: 0.5rem 1rem;
-  display: inline-block;
-  border-bottom: 2px solid transparent;
-}
-.project-tabs a:hover,
-.project-tabs a:focus {
-  border-bottom-color: #333;
-}
-
-/* Fallback Content */
-.project-fallback {
-  text-align: center;
-  color: #666;
+  background: #e0e0e0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem 0;
+.project-tabs li.active a,
+.project-tabs a:hover {
   background: #333;
   color: #fff;
+}
+
+/* ==== PROJECT CONTENT TABS ==== */
+.project-content .tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-content .tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ==== OPTIONAL: ADDITIONAL UTILITY CLASSES ==== */
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #555;
 }
